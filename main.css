@@ -198,6 +198,7 @@ a.link-btn:hover {
   font-size: 14px;
   border-radius: 4px;
 }
+a.link-btn:hover { background: var(--primary-dark); }
 
 /* =========================
    FOOTER
