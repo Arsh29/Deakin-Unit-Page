@@ -6,32 +6,81 @@
   --border: #e0e0e0;
   --bg-light: #f7f8f7;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Arial, sans-serif; color: var(--text); line-height: 1.6; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+   ========================= */
 
 header.site-header {
   background: #fff;
   border-bottom: 3px solid var(--primary);
-  padding: 14px 32px;
+  padding: 12px 32px;
+  height: 120px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.logo { font-size: 22px; font-weight: 800; color: var(--primary-dark); letter-spacing: 0.5px; }
-.logo span { color: var(--text); font-weight: 400; font-size: 13px; display: block; }
+
+/* Deakin logo */
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  display: block;
+  height: 90px;
+  width: auto;
+  max-width: 170px;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav.main-nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
 
 nav.main-nav ul {
   list-style: none;
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 32px;
 }
+
 nav.main-nav a {
   text-decoration: none;
   color: var(--text);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
+  white-space: nowrap;
 }
-nav.main-nav a:hover { color: var(--primary-dark); }
+
+nav.main-nav a:hover {
+  color: var(--primary-dark);
+}
+
+/* =========================
+   BREADCRUMB
+   ========================= */
 
 .breadcrumb {
   padding: 10px 32px;
@@ -39,36 +88,70 @@ nav.main-nav a:hover { color: var(--primary-dark); }
   color: var(--muted);
   background: var(--bg-light);
 }
-.breadcrumb a { color: var(--primary-dark); text-decoration: none; }
 
-main { max-width: 960px; margin: 0 auto; padding: 32px; }
+.breadcrumb a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px;
+}
 
 h1.unit-title {
   font-size: 28px;
   color: var(--primary-dark);
   margin-bottom: 6px;
 }
-.unit-subtitle { color: var(--muted); margin-bottom: 24px; font-size: 15px; }
+
+.unit-subtitle {
+  color: var(--muted);
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+/* =========================
+   UNIT DETAILS TABLE
+   ========================= */
 
 table.unit-info {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 32px;
 }
-table.unit-info tr { border-bottom: 1px solid var(--border); }
-table.unit-info th, table.unit-info td {
+
+table.unit-info tr {
+  border-bottom: 1px solid var(--border);
+}
+
+table.unit-info th,
+table.unit-info td {
   text-align: left;
   padding: 12px 8px;
   vertical-align: top;
   font-size: 14px;
 }
+
 table.unit-info th {
   width: 220px;
   color: var(--muted);
   font-weight: 600;
 }
 
-section.content-block { margin-bottom: 32px; }
+/* =========================
+   CONTENT SECTIONS
+   ========================= */
+
+section.content-block {
+  margin-bottom: 32px;
+}
+
 section.content-block h2 {
   font-size: 20px;
   color: var(--primary-dark);
@@ -76,7 +159,16 @@ section.content-block h2 {
   border-left: 4px solid var(--primary);
   padding-left: 10px;
 }
-section.content-block p { font-size: 15px; color: var(--text); margin-bottom: 10px; }
+
+section.content-block p {
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+/* =========================
+   FEE LINK
+   ========================= */
 
 a.link-btn {
   display: inline-block;
@@ -89,7 +181,14 @@ a.link-btn {
   font-size: 14px;
   font-weight: 600;
 }
-a.link-btn:hover { background: var(--primary-dark); }
+
+a.link-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* =========================
+   HURDLE BOX
+   ========================= */
 
 .hurdle-box {
   background: var(--bg-light);
@@ -99,6 +198,11 @@ a.link-btn:hover { background: var(--primary-dark); }
   font-size: 14px;
   border-radius: 4px;
 }
+a.link-btn:hover { background: var(--primary-dark); }
+
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
   background: #1a1a1a;
@@ -108,4 +212,8 @@ footer {
   font-size: 13px;
   margin-top: 40px;
 }
-footer a { color: #9fd8b8; text-decoration: none; }
+
+footer a {
+  color: #9fd8b8;
+  text-decoration: none;
+}
